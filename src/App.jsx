@@ -12,7 +12,7 @@ function App() {
     <>
       {/* <h1>Countries on the world</h1> */}
 
-      <Suspense fallback={<p>Countries Are Loading...</p>}>
+      <Suspense fallback={<p style={{'color':'white'}}>Countries Are Loading...</p>}>
         <Countries countriesPromises={countriesPromises}></Countries>
       </Suspense>
     </>

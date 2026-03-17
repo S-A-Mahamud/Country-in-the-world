@@ -14,7 +14,7 @@ export default function Countries({ countriesPromises }) {
 
     return (
         <div>
-            <h1>Countries on the world</h1>
+            <h1 style={{'color':'white'}}>Countries on the world</h1>
 
             <div className="countries">
                 {
