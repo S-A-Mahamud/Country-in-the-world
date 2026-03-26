@@ -1,7 +1,7 @@
 import './country.css';
 import { useState } from 'react';
 
-export default function Countries({ country }) {
+export default function Country({ country, handleVisitedFlag, handleVisitedCountry }) {
 
     const [active, setActive] = useState(false);
 
@@ -21,8 +21,14 @@ export default function Countries({ country }) {
                 'border' : '1px solid white',
                 'borderRadius' : '5px',
                 'cursor' : 'pointer'
-            }} onClick={() => setActive(!active)}>
+            }} onClick={() => {
+                setActive(!active);
+                handleVisitedCountry(country?.name?.common);
+            }}>
                 {active ? 'Active' : 'Not Active'}
+            </button>
+            <button onClick={()=> {handleVisitedFlag(country?.flags?.flags?.png)}}>
+                Visited Country Flag
             </button>
         </div>
     )
